@@ -11,11 +11,12 @@ class DemoController {
     }
 
     def createOneObject() {
-        new Sample(name: 'TEST1', content: 'ABCDE').save(flush: true)
+        if (!Sample.count())
+            new Sample(name: 'TEST1', content: 'ABCDE').save(flush: true)
     }
 
-    def printValues(Sample sample){
-        println("Total Objects > "+Sample.count())
-        println("Object 1 > Content > "+sample.content)
+    def printValues(Sample sample) {
+        println("Total Objects > " + Sample.count())
+        println("Object 1 > Content > " + sample.content)
     }
 }

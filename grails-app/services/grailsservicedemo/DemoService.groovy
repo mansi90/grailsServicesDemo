@@ -5,7 +5,6 @@ import grails.transaction.Transactional
 @Transactional
 class DemoService {
 
-    @Transactional
     def fiddle(Long id1, Long id2) {
         println('In Demo Service')
         def object1 = Sample.findById(id1)
