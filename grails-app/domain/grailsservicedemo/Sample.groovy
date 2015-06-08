@@ -5,5 +5,6 @@ class Sample {
     String content
 
     static constraints = {
+        content nullable: false, blank: false
     }
 }
